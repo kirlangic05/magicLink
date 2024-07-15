@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>Email</title>
+</head>
+
+
+
+<body>
+<center>
+    <div>
+        <table style="width: 100%; text-align: center;">
+
+            <tr><center>
+                <td style="padding: 10px;">
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Delichon_urbicum_-Iceland_-flying-8.jpg/640px-Delichon_urbicum_-Iceland_-flying-8.jpg"
+                         class="img-fluid" alt="Sabit Resim" width="100" height="100" style="display: block; margin: 0 auto;">
+
+                    <h1>Merhaba, <span th:text="${user.username}"></span>!</h1>
+                    <p>Giriş İçin Linke Tıklayınız</p>
+
+                    <p>KırlangıçBank</p>
+
+                    <a  th:href="@{'http://localhost:8080/email_success?token=' + ${token}}">
+                        <button type="button" style="border-radius: 20px; background-color: #1753E8; color: #ffffff; " class="btn btn-primary btn-sm">Gir</button>
+
+                    </a>
+<!--                    <a href="http://localhost:8080/email_success"> href="@{'/email_success'(token=${token})}"-->
+<!--                        <button type="button" style="border-radius: 20px; background-color: #1753E8; color: #ffffff; " class="btn btn-primary btn-sm">Gir</button>-->
+<!--                        <a href="@{/email_success(token=${token})}">Click to login</a>-->
+<!--                    </a>-->
+                </td>
+            </center>
+            </tr>
+        </table>
+
+    </div>
+</center>
+</body>
+</html>
