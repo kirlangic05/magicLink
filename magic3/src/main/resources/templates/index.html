@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet"type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container text-center">
+    <h1>Hoşgeldiniz</h1>
+    <div>
+        <h3><a th:href="@{/list_users}">Userları Görüntüle</a></h3>
+        <h3><a th:href="@{/register}">Kayıt</a></h3>
+        <h3><a th:href="@{/login}">Giriş</a></h3>
+    </div>
+</div>
+
+
+</body>
+</html>
